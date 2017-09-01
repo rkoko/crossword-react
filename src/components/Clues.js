@@ -9,7 +9,7 @@ const Clues = (props) => {
         <div className="clue-divs">
           <h2>Across</h2>
           <ul className="answer-text" id="across">
-            {props.across.map((clue) => <li>{clue}</li>)}
+            {props.across.map((clue) => <li>{clue.num + '. ' + clue.clue} <br/> <br/></li>)}
           </ul>
         </div>
       </div>
@@ -18,7 +18,7 @@ const Clues = (props) => {
         <div className="clue-divs">
           <h2>Down</h2>
           <ul className="answer-text" id="down">
-            {props.down.map((clue) => <li>{clue}</li>)}
+            {props.down.map((clue) =>  <li>{clue.num + '. ' + clue.clue} <br/> <br/> </li>)}
           </ul>
         </div>
       </div>

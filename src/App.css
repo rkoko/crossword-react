@@ -3,7 +3,8 @@ body {
   }
 
   #wrapper {
-    background-image: url('http://i.imgur.com/BpPL9Qs.jpg');
+    /*background-image: url('http://i.imgur.com/BpPL9Qs.jpg');*/
+    background-color: gray;
     background-size: 135%;
     background-repeat: no-repeat;
     background-position: top;
@@ -13,6 +14,8 @@ body {
     margin-left: 75px;
     padding-bottom: 1000px;
     text-align: left;
+    font-size: 50px;
+    font-family: 'Permanent Marker', cursive !important;
   }
 
   div {
