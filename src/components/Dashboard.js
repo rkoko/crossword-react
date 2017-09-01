@@ -6,7 +6,7 @@ class Dashboard extends Component{
   render(){
     return(
       <div>
-        <Button primary onClick={this.props.handleGenerate}>Generate Crossword</Button>
+        {this.props.nextCrossword.length > 0 ? <Button primary onClick={this.props.handleGenerate}>Generate Crossword</Button> : null}
       </div>
 
 

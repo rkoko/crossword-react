@@ -145,7 +145,7 @@ class Crossword extends Component{
   return(
     <div>
       <form onSubmit={this.handleSubmit}>
-        <button type='submit'>Submit Crossword</button>
+        <Button color='green' type='submit'>Submit Crossword</Button>
 
     <div id="wrapper">
 

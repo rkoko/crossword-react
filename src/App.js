@@ -3,6 +3,7 @@ import Crossword from './components/Crossword'
 import Clues from './components/Clues'
 import Dashboard from './components/Dashboard'
 import {getWords} from './apiAdapter'
+import { Grid } from 'semantic-ui-react'
 import './App.css';
 
 class App extends Component {
@@ -68,11 +69,13 @@ class App extends Component {
   render() {
     console.log(this.state)
     return (
-      <div className="App">
-        <Dashboard handleGenerate={this.handleGenerate}/>
-        <Crossword crosswordData={this.state.currentCrossword} generateBool={this.state.clickedGen} resetGen={this.resetGen}/>
-        {this.state.acrossClues.length > 0 && this.state.downClues.length > 0 ? <Clues across={this.state.acrossClues} down={this.state.downClues}/> : null}
-      </div>
+      <Grid>
+        <div className="App">
+          <Dashboard handleGenerate={this.handleGenerate} nextCrossword={this.state.nextCrossword}/>
+          <Crossword crosswordData={this.state.currentCrossword} generateBool={this.state.clickedGen} resetGen={this.resetGen}/>
+          {this.state.acrossClues.length > 0 && this.state.downClues.length > 0 ? <Clues across={this.state.acrossClues} down={this.state.downClues}/> : null}
+        </div>
+      </Grid>
     );
   }
 }

@@ -1,10 +1,19 @@
+input {
+  font-family: 'Permanent Marker', cursive !important;
+  text-align: center;
+}
+
+.App {
+  margin-top: 100px
+}
+
 body {
     margin-bottom: 20px;
   }
 
   #wrapper {
     /*background-image: url('http://i.imgur.com/BpPL9Qs.jpg');*/
-    background-color: gray;
+    /*background-color: gray;*/
     background-size: 135%;
     background-repeat: no-repeat;
     background-position: top;
@@ -15,7 +24,7 @@ body {
     padding-bottom: 1000px;
     text-align: left;
     font-size: 50px;
-    font-family: 'Permanent Marker', cursive !important;
+    /*font-family: 'Permanent Marker', cursive !important;*/
   }
 
   div {
@@ -45,7 +54,7 @@ body {
     width: 60px;
     height: 60px;
     /*background: rgba(224, 225, 226, 1); */
-    /*background: white;   */
+    background: black;
     border: 1px;
     padding: 0;
     margin: 0;
