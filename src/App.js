@@ -14,7 +14,8 @@ class App extends Component {
       currentCrossword: [],
       nextCrossword: [],
       acrossClues: [],
-      downClues: []
+      downClues: [],
+      clickedGen: false
     }
   }
 
@@ -24,11 +25,14 @@ class App extends Component {
 
   handleGenerate = () => {
     let currentCrossword = this.state.nextCrossword
-    this.setState({ currentCrossword }, this.structureClues)
+    this.setState({ currentCrossword, clickedGen: true }, this.structureClues)
     getWords()
     .then((json) => this.setState({ nextCrossword: json }))
   }
 
+  resetGen = () => {
+    this.setState({ clickedGen: false })
+  }
 
   structureClues = () => {
     let clues = this.state.currentCrossword.map((data) => data.clue)
@@ -66,9 +70,8 @@ class App extends Component {
     return (
       <div className="App">
         <Dashboard handleGenerate={this.handleGenerate}/>
-        <Crossword crosswordData={this.state.currentCrossword}/>
+        <Crossword crosswordData={this.state.currentCrossword} generateBool={this.state.clickedGen} resetGen={this.resetGen}/>
         {this.state.acrossClues.length > 0 && this.state.downClues.length > 0 ? <Clues across={this.state.acrossClues} down={this.state.downClues}/> : null}
-
       </div>
     );
   }
